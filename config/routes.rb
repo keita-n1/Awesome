@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'items/index'
-  get 'items/new'
-  get 'items/show'
-  root "items#index"
+  resources :coordinates, only: [:index, :new, :create, :show]
+  root "coordinates#index"
 end

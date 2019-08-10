@@ -17,11 +17,11 @@
         - if user_signed_in?
           .user
             %p.img
-              = link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32", class: "image"), items_show_path
+              = link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32", class: "image"), root_path
             %p.current_user-name
               = current_user.name
             %p.post 
-              = link_to '投稿する', items_new_path, method: :get, class: "post_button"
+              = link_to '投稿する', new_coordinate_path, method: :get, class: "post_button"
             %p.logout
               = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout_button"
         - else
