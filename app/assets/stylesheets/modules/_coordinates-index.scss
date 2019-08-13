@@ -1,4 +1,4 @@
-.items-index {
+.coordinates-index {
   background: $glay;
   #main {
     padding: 54px 0 0 0;
@@ -163,78 +163,78 @@
           }
           .new_arrival_image {
             overflow:hidden;
-            .large {
-              float: left;
-              margin: 18px 0 0 18px;
-              border: 1px #ddd solid;
-              background: white;
-              position: relative;
-              .image_container {
-                background: #eaeaea;
-                .img {
-                  img {
-                    vertical-align: bottom;
-                    height: 506px;
-                    width: 379px;
-                  }
-                }
-              }
-              .profile {
-                padding: 10px;
-                .content {
-                  width: 290px;
-                  float: left;
-                  .sub {
-                    width: 32px;
-                    float: left;
-                    .img {
-                      img {
-                        border-radius: 50%;
-                        border: 1px #ddd solid;
-                      }
-                    }
-                  }
-                  .main {
-                    width: 248px;
-                    float: right;
-                    .name {
-                      font-size: 13px;
-                      line-height: 1.2;
-                      font-weight: bold;
-                    }
-                    .height {
-                      font-size: 11px;
-                      line-height: 1.2;
-                      margin-top: 3px;
-                    }
-                  }
-                }
-                .like_container {
-                  float: right;
-                  width: 64px;
-                  .awesome {
-                    font-size: 13px;
-                    line-height: 1.2;
-                    color: #99FFCC;
-                    font-weight: bold;
-                  }
-                  .far {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: left;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
-                  .like {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: right;
-                  }
-                }
-              }
-            }
+            // .large {
+            //   float: left;
+            //   margin: 18px 0 0 18px;
+            //   border: 1px #ddd solid;
+            //   background: white;
+            //   position: relative;
+            //   .image_container {
+            //     background: #eaeaea;
+            //     .img {
+            //       img {
+            //         vertical-align: bottom;
+            //         height: 506px;
+            //         width: 379px;
+            //       }
+            //     }
+            //   }
+            //   .profile {
+            //     padding: 10px;
+            //     .content {
+            //       width: 290px;
+            //       float: left;
+            //       .sub {
+            //         width: 32px;
+            //         float: left;
+            //         .img {
+            //           img {
+            //             border-radius: 50%;
+            //             border: 1px #ddd solid;
+            //           }
+            //         }
+            //       }
+            //       .main {
+            //         width: 248px;
+            //         float: right;
+            //         .name {
+            //           font-size: 13px;
+            //           line-height: 1.2;
+            //           font-weight: bold;
+            //         }
+            //         .height {
+            //           font-size: 11px;
+            //           line-height: 1.2;
+            //           margin-top: 3px;
+            //         }
+            //       }
+            //     }
+            //     .like_container {
+            //       float: right;
+            //       width: 64px;
+            //       .awesome {
+            //         font-size: 13px;
+            //         line-height: 1.2;
+            //         color: #99FFCC;
+            //         font-weight: bold;
+            //       }
+            //       .far {
+            //         font-size: 11px;
+            //         line-height: 1.2;
+            //         margin-top: 3px;
+            //         float: left;
+            //         color: #FF6699;
+            //         font-weight: bold;
+            //       }
+            //       .like {
+            //         font-size: 11px;
+            //         line-height: 1.2;
+            //         margin-top: 3px;
+            //         float: right;
+            //       }
+            //     }
+            //   }
+            // }
             li {
               float: left;
               margin: 18px 0 0 18px;
