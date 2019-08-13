@@ -13,14 +13,16 @@
               .section_sub
                 %h2 コーディネート画像
                 %span ※
-              .section_main
-                .sub
-                  .img_box
-                    %span NO IMAGE
-                .main
-                  %p.select 写真をアップロード
-                  = f.file_field :image, class: "coordinate_image"
-                  
+              // id "file"で、fileとdivを紐付けクリック時に連動
+              #img_field{:onclick => "$('#file').click()"}
+                // 画像があるときは画像を表示する
+                - if @coordinate.image.present?
+                  = image_tag @coodinate.image
+                - else
+                  %i.fas.fa-image
+                  %i.fas.fa-file-upload.add
+              // id "file"をつけ、「display:none;」で隠す
+              = f.file_field :image, class: "image", style: "display:none;", id: "file"
             .secondary
               .coodinate_detail
                 .section_sub
@@ -69,7 +71,5 @@
                   -#       %option{value: "6"} 60代
           .processing
             %li.upload
-              = link_to "UPLOAD", "/", class: "over"
-              = f.submit
+              = f.submit value: "UPLOAD", class: "over"
               
-
