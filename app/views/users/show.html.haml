@@ -6,16 +6,16 @@
         #users_header
           #users_sub
             .image
-              = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '148', height: '148'
+              = image_tag @user.profile_image, class: 'img', width: '148', height: '148'
           #users_main
             %section.intro
-              %h1.name keita
+              %h1.name #{@user.name}
               .meta
                 %ul.info
-                  %li 178cm
-                  %li men
+                  %li #{@user.height}cm
+                  %li #{@user.gender}
             %section.profile
-              %p.profile__detail aaaaaaaaaaaaaaaaaaaaaaaaaaa
+              %p.profile__detail #{@user.profile}
     #glb_body
       .current_user
         .current_user__number 300
@@ -52,7 +52,3 @@
               = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
             .list__meta
               %i.far.fa-heart 111
-
-
-
-
