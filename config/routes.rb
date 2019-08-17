@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :coordinates, only: [:index, :new, :create, :show]
-  resources :users, only: [:create, :edit, :show, :update]
+  resources :personals, only: [:new, :create, :show]
   root "coordinates#index"
 end
