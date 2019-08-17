@@ -1,4 +1,4 @@
-.users-edit
+.personals-new
   %article#main
     %header#glb_title
       #glb_title_container 
@@ -7,7 +7,7 @@
           %i.fas.fa-camera-retro　コーディネート投稿
     #glb_body
       .content
-        = form_with model: @user, local: true do |f|
+        = form_with model: @personal, local: true do |f|
           .upload_container
             %section.upload_img
               .section_sub
@@ -16,8 +16,8 @@
               // id "file"で、fileとdivを紐付けクリック時に連動
               #img_field{:onclick => "$('#file').click()"}
                 // 画像があるときは画像を表示する
-                - if @user.profile_image.present?
-                  = image_tag @user.profile_image
+                - if @personal.profile_image.present?
+                  = image_tag @personal.profile_image
                 - else
                   %i.fas.fa-image
                   %i.fas.fa-file-upload.add
