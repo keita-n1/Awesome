@@ -17,7 +17,7 @@
         - if user_signed_in?
           .user
             %p.img
-              = link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32", class: "image"), user_path(current_user)
+              = link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32", class: "image"), personal_path(current_user)
             %p.current_user-name
               = current_user.name
             %p.post 
