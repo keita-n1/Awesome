@@ -13,6 +13,15 @@ class PersonalsController < ApplicationController
     @personal = Personal.find_by(user_id: current_user.id)
   end
 
+  def edit
+    @personal = Personal.find_by(user_id: current_user.id)
+  end
+
+  def update
+    personal = Personal.find(params[:id])
+    personal.update(personal_params)
+  end
+
   private
 
   def personal_params

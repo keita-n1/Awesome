@@ -156,9 +156,9 @@
                   .detail {
                     margin-top: 5px;
                     select {
-                      border: 1px #ddd solid;
+                      border: 1px #EDBC6C solid;
                     }
-                    #upload_sex {
+                    #personal_gender {
                       @include coordinate_list_upload;
                     }
                   }
@@ -174,9 +174,9 @@
                   .detail {
                     margin-top: 5px;
                     select {
-                      border: 1px #ddd solid;
+                      border: 1px #EDBC6C solid;
                     }
-                    #upload_height {
+                    #personal_height {
                       @include coordinate_list_upload;
                     }
                   }
@@ -192,9 +192,9 @@
                   .detail {
                     margin-top: 5px;
                     select {
-                      border: 1px #ddd solid;
+                      border: 1px #EDBC6C solid;
                     }
-                    #upload_age {
+                    #personal_age {
                       @include coordinate_list_upload;
                     }
                   }
