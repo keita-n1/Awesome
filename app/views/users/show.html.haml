@@ -1,3 +1,4 @@
+= render 'header/header'
 .users-show
   %article#glb_main
     %header#glb_title
@@ -13,7 +14,8 @@
           #users_main
             %section.intro
               %h1.name #{current_user.name}
-              = link_to '編集する', edit_user_path, class: 'link'
+              -if current_user.id == @user.id
+                = link_to '編集する', edit_user_path, class: 'link'
               .meta
                 %ul.info
                   %li #{@user.height}cm
@@ -32,28 +34,4 @@
                 = image_tag user.image.to_s, class: 'img', width: '230', height: '308'
               .list__meta
                 %i.far.fa-heart 111
-          -# %li.list
-          -#   .list__image
-          -#     = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
-          -#   .list__meta
-          -#     %i.far.fa-heart 111
-          -# %li.list
-          -#   .list__image
-          -#     = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
-          -#   .list__meta
-          -#     %i.far.fa-heart 111
-          -# %li.list
-          -#   .list__image
-          -#     = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
-          -#   .list__meta
-          -#     %i.far.fa-heart 111
-          -# %li.list
-          -#   .list__image
-          -#     = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
-          -#   .list__meta
-          -#     %i.far.fa-heart 111
-          -# %li.list
-          -#   .list__image
-          -#     = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
-          -#   .list__meta
-          -#     %i.far.fa-heart 111
+          
