@@ -17,7 +17,7 @@
               #img_field{:onclick => "$('#file').click()"}
                 // 画像があるときは画像を表示する
                 - if @user.profile_image.present?
-                  = image_tag @user.profile_image.to_s(current_user)
+                  = image_tag @user.profile_image.to_s
                 - else
                   %i.fas.fa-image
                   %i.fas.fa-file-upload.add
@@ -41,7 +41,7 @@
                     %h3 身長
                     %span ※
                     .detail
-                      = f.select :height, ["140cm", "145cm", "150cm", "155cm", "160cm", "165cm", "170cm", "175cm", "180cm", "185cm", "190cm"], prompt: "選択してください"
+                      = f.select :height, ["140", "145", "150", "155", "160", "165", "170", "175", "180", "185", "190"], prompt: "選択してください"
                   .list.age
                     %h3 年齢
                     %span ※
