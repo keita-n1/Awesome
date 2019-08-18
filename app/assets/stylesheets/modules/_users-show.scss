@@ -1,4 +1,4 @@
-.personals-show {
+.users-show {
   background: $glay;
   #glb_main {
     padding: 54px 0 0 0;
@@ -83,6 +83,7 @@
       width: 990px;
       margin: 0 auto;
       padding-top: 10px;
+      min-height: 500px;
       .current_user {
         width: 120px;
         height: 55px;

@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :comments
   has_many :coordinates
-  has_one :personal, dependent: :destroy
+  mount_uploader :profile_image, ImageUploader
 end
