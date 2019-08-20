@@ -1,3 +1,4 @@
+= render 'header/header'
 .coordinates-show
   %article#main
     %header#gbl_title
@@ -5,13 +6,16 @@
       #user_header
         .container
           .avatar
-            = link_to image_tag("//cdn.wimg.jp/profile/sirkp0/20190209200853931_80.jpg"), root_path
+            - if @user.profile_image.present?
+              = link_to image_tag(@user.profile_image.to_s), user_path(@user.id)
+            - else
+              = link_to image_tag('http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg'), user_path(@user.id)
           .content
-            %p.name けいた
+            %p.name #{@coordinate.user.name}
             .meta
               %ul.info
-                %li 178cm
-                %li MEN
+                %li #{@coordinate.user.height}cm
+                %li #{@coordinate.user.gender}
     #gbl_body
       #content_container
         .comment_container
@@ -29,38 +33,27 @@
                   %p 左引き出し文
             //右コメント
             .mycomment
-              %p 右引き出し文
+              %p 右引き出し文 
         .content_sub
           .coodinate_img
-            = image_tag "//cdn.wimg.jp/coordinate/sirkp0/20190715074451246/20190715074451246_500.jpg", height: "743", width: "556"
+            = image_tag @coordinate.image.to_s, height: "743", width: "556"
           .coodinate_info
-            %h1.coodiname_info__title ケイタのシャツ
             %ul
               %li モデル情報
-              %li 178cm
-              %li MEN
-            .content Inter factory ユウトオリジナルアイテムの2way ストライプシャツを着ました⠀こちらは袖の長さが変更(脱着)できる万能シャツです🙆‍♂️！
-          .coodinate_more
-            %h3.coodinate_more__title ゆうの人気コーディネート
-            %ul
-              %li.more_img_1
-                %p.img
-                  = link_to image_tag("//cdn.wimg.jp/coordinate/sirkp0/20190715074451246/20190715074451246_500.jpg", height: "229", width: "172"), root_path
-                .like_container
-                  %i.far.fa-heart
-                  %p.like 1045
-              %li.more_img_2
-                %p.img
-                  = link_to image_tag("//cdn.wimg.jp/coordinate/sirkp0/20190715074451246/20190715074451246_500.jpg", height: "229", width: "172"), root_path
-                .like_container
-                  %i.far.fa-heart
-                  %p.like 1045
-              %li.more_img_2
-                %p.img
-                  = link_to image_tag("//cdn.wimg.jp/coordinate/sirkp0/20190715074451246/20190715074451246_500.jpg", height: "229", width: "172"), root_path
-                .like_container
-                  %i.far.fa-heart
-                  %p.like 1045
+              %li #{@coordinate.user.height}cm
+              %li #{@coordinate.user.gender}
+            .content #{@coordinate.item_detail}
+          -# .coodinate_more
+          -#   %h3.coodinate_more__title #{@coordinate.user.name}のコーディネート
+            -# %ul
+            -#   - @coordinates.each do |coordinate|
+            -#     %li.more_img
+            -#       %p.img
+            -#         - if coordinate.image.present?
+            -#           = link_to image_tag(coordinate.image.to_s, height: "229", width: "172"), root_path
+            -#       .like_container
+            -#         %i.far.fa-heart
+            -#       %p.like 1045
             .more
-              =link_to 'もっと見る', '/', class: 'over'
+              =link_to 'もっと見る', user_path, class: 'over'
               

@@ -1,4 +1,4 @@
-.personals-new {
+.users-edit {
   background: $glay;
   #main {
     padding: 54px 0 0 0;
@@ -145,6 +145,21 @@
                     }
                   }
                 }
+                .name {
+                  h3 {
+                    font-size: 14px;
+                    display: inline-block;
+                  }
+                  span {
+                    @include coordinate_list_span;
+                  }
+                  .detail {
+                    margin-top: 5px;
+                    #user_name {
+                      border: 1px #EDBC6C solid;
+                    }
+                  }
+                }
                 .sex {
                   h3 {
                     font-size: 14px;
@@ -156,9 +171,9 @@
                   .detail {
                     margin-top: 5px;
                     select {
-                      border: 1px #ddd solid;
+                      border: 1px #EDBC6C solid;
                     }
-                    #upload_sex {
+                    #user_gender {
                       @include coordinate_list_upload;
                     }
                   }
@@ -174,9 +189,9 @@
                   .detail {
                     margin-top: 5px;
                     select {
-                      border: 1px #ddd solid;
+                      border: 1px #EDBC6C solid;
                     }
-                    #upload_height {
+                    #user_height {
                       @include coordinate_list_upload;
                     }
                   }
@@ -192,9 +207,9 @@
                   .detail {
                     margin-top: 5px;
                     select {
-                      border: 1px #ddd solid;
+                      border: 1px #EDBC6C solid;
                     }
-                    #upload_age {
+                    #user_age {
                       @include coordinate_list_upload;
                     }
                   }

@@ -174,15 +174,13 @@
         .content_sub {
           width: 558px;
           float: left;
+          .coodinate_img {
+            height: 743px;
+          }
           .coodinate_info {
             background: white;
             border: 1px #ddd solid;
             padding: 20px 0 13px 20px;
-            &__title {
-              font-size: 14px;
-              font-weight: bold;
-              line-height: 1.5;
-            }
             ul {
               display: flex;
               margin-top: 10px;
@@ -207,27 +205,12 @@
             }
             ul {
               display: flex;
-              .more_img_1 {
+              .more_img {
                 border: 1px #ddd solid;
                 margin-top: 18px;
                 width: 174px;
                 background: white;
-                .like_container {
-                  display: flex;
-                  .far {
-                    font-size: 18px;
-                    line-height: 1.2;
-                    margin: 3px 10px 3px 6px;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
-                }
-              }
-              .more_img_2 {
-                border: 1px #ddd solid;
-                margin: 18px 0 0 18px;
-                width: 174px;
-                background: white;
+                margin-right: 18px;
                 .like_container {
                   display: flex;
                   .far {

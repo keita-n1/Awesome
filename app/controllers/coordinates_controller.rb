@@ -14,6 +14,9 @@ class CoordinatesController < ApplicationController
   end
 
   def show
+    @coordinate = Coordinate.find(params[:id])
+    @user = @coordinate.user
+    @coordinates = Coordinate.all.order("created_at DESC").limit(3)
   end
 
   private
@@ -23,3 +26,4 @@ class CoordinatesController < ApplicationController
   end
 
 end
+
