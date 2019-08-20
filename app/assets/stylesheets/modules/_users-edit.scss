@@ -145,6 +145,21 @@
                     }
                   }
                 }
+                .name {
+                  h3 {
+                    font-size: 14px;
+                    display: inline-block;
+                  }
+                  span {
+                    @include coordinate_list_span;
+                  }
+                  .detail {
+                    margin-top: 5px;
+                    #user_name {
+                      border: 1px #EDBC6C solid;
+                    }
+                  }
+                }
                 .sex {
                   h3 {
                     font-size: 14px;

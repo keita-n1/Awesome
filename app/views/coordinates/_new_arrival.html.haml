@@ -21,7 +21,7 @@
       %li
         .image_container
           %p.img
-            = link_to image_tag(coordinate.image.to_s), coordinate_path(coordinate.user.id)
+            = link_to image_tag(coordinate.image.to_s), user_coordinate_path(coordinate.user_id, coordinate.id)
         .profile
           .content
             .sub

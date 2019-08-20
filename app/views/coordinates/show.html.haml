@@ -7,9 +7,9 @@
         .container
           .avatar
             - if @user.profile_image.present?
-              = link_to image_tag(@user.profile_image.to_s), user_path
+              = link_to image_tag(@user.profile_image.to_s), user_path(@user.id)
             - else
-              = link_to image_tag('http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg'), user_path
+              = link_to image_tag('http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg'), user_path(@user.id)
           .content
             %p.name #{@coordinate.user.name}
             .meta
@@ -36,24 +36,24 @@
               %p 右引き出し文 
         .content_sub
           .coodinate_img
-            = image_tag "//cdn.wimg.jp/profile/sirkp0/20190209200853931_80.jpg", height: "743", width: "556"
+            = image_tag @coordinate.image.to_s, height: "743", width: "556"
           .coodinate_info
             %ul
               %li モデル情報
               %li #{@coordinate.user.height}cm
               %li #{@coordinate.user.gender}
             .content #{@coordinate.item_detail}
-          .coodinate_more
-            %h3.coodinate_more__title #{@coordinate.user.name}のコーディネート
-            %ul
-              - @coordinates.each do |coordinate|
-                %li.more_img
-                  %p.img
-                    -# - if coordinate.image.present?
-                    = link_to image_tag(coordinate.image.to_s, height: "229", width: "172"), root_path
-                  .like_container
-                    %i.far.fa-heart
-                  %p.like 1045
+          -# .coodinate_more
+          -#   %h3.coodinate_more__title #{@coordinate.user.name}のコーディネート
+            -# %ul
+            -#   - @coordinates.each do |coordinate|
+            -#     %li.more_img
+            -#       %p.img
+            -#         - if coordinate.image.present?
+            -#           = link_to image_tag(coordinate.image.to_s, height: "229", width: "172"), root_path
+            -#       .like_container
+            -#         %i.far.fa-heart
+            -#       %p.like 1045
             .more
               =link_to 'もっと見る', user_path, class: 'over'
               
