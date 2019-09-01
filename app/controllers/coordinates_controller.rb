@@ -13,12 +13,6 @@ class CoordinatesController < ApplicationController
     redirect_to root_path
   end
 
-  def show
-    @coordinate = Coordinate.find(params[:id])
-    @user = @coordinate.user
-    @coordinates = Coordinate.all.order("created_at DESC").limit(3)
-  end
-
   private
 
   def coordinate_params
