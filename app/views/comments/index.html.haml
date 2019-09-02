@@ -1,0 +1,64 @@
+= render 'header/header'
+.comments-index
+  %article#main
+    %header#gbl_title
+      #gbl_title_container パンくず
+      #user_header
+        .container
+          .avatar
+            - if @coordinate.user.profile_image.present?
+              = link_to image_tag(@coordinate.user.profile_image.to_s), user_path(@coordinate.user.id)
+            - else
+              = link_to image_tag('http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg'), user_path(@user.id)
+          .content
+            %p.name #{@coordinate.user.name}
+            .meta
+              %ul.info
+                %li #{@coordinate.user.height}cm
+                %li #{@coordinate.user.gender}
+    #gbl_body
+      #content_container
+        .comment_container
+          .like_container
+            %p.awesome Awesome
+            %i.far.fa-heart
+            %p.like 1045
+          .form 
+            = form_with model: @comment,url: {action: :create}, local: true do |f|
+              = f.text_area :comment, class: "comment"
+              = f.submit value: "送信", class: "comment_btn"
+          .comments
+            - @comments.each do |comment|
+              //左コメント
+              .balloon6
+                .faceicon
+                  = link_to image_tag(comment.user.profile_image.to_s, class: "img"), user_path(comment.user.id)
+                .chatting
+                  .says
+                    %p #{comment.comment}
+              //右コメント
+              -# .mycomment
+              -#   %p #{comment.comment}
+        .content_sub
+          .coodinate_img
+            = image_tag @coordinate.image.to_s, height: "743", width: "556"
+          .coodinate_info
+            %ul
+              %li モデル情報
+              %li #{@coordinate.user.height}cm
+              %li #{@coordinate.user.gender}
+            .content #{@coordinate.item_detail}
+          .coodinate_more
+            %h3.coodinate_more__title #{@coordinate.user.name}のコーディネート
+            %ul
+              - @coordinates.each do |coordinate|
+                %li.more_img
+                  %p.img
+                    - if coordinate.image.present?
+                      = link_to image_tag(coordinate.image.to_s, height: "229", width: "174"), user_coordinate_comments_path(coordinate.user_id, coordinate.id)
+                  .like_container
+                    %i.far.fa-heart
+                  %p.like 1045
+            .more
+              = link_to 'もっと見る', user_path(@coordinate.user.id), class: 'over'
+              
