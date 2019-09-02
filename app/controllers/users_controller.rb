@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @users = @user.coordinates
+    @users = @user.coordinates.order("created_at DESC")
   end
 
   def edit
