@@ -9,8 +9,7 @@
       border: 1px #ddd solid;
       position: relative;
       #glb_title_container {
-        width: 990px;
-        margin: 0 auto;
+        @include breadcrumbs;
         .bread {
           height: 27px;
         }
