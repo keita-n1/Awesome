@@ -27,7 +27,7 @@
             .sub
               %p.img
                 - if coordinate.user.profile_image.present?
-                  = link_to image_tag(coordinate.user.profile_image.to_s, width: "32", height: "32"), root_path
+                  = link_to image_tag(coordinate.user.profile_image.to_s, width: "32", height: "32"), user_path(coordinate.user.id)
                 - else 
                   = link_to image_tag('http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg', width: "32", height: "32"), root_path
             .main
