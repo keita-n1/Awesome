@@ -9,9 +9,8 @@
       border-bottom: 1px #ddd solid;
       position: relative;
       border: 1px #ddd solid;
-      #gbl_title_container {
-        width: 990px;
-        margin: 0 auto;
+      #glb_title_container {
+        @include breadcrumbs;
       }
       #user_header {
         padding: 12px 0;

@@ -77,6 +77,8 @@ gem "haml-rails", "~> 2.0"
 gem 'erb2haml'
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'gretel'
 gem "devise"
 gem 'carrierwave'
 gem 'mini_magick'
+
