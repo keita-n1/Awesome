@@ -10,8 +10,12 @@
       #glb_titlle_container {
         width: 990px;
         margin: 0 auto;
-        #bread {
-          width: 790px;
+        .breadcrumbs {
+          font-size: 13px;
+          a {
+            text-decoration: none;
+            color: $button;
+          }
         }
         #users_header {
           margin-top: 22px;
@@ -43,7 +47,7 @@
               .link {
                 float: right;
                 text-decoration: none;
-                color: #0099FF;
+                color: $button;
                 font-weight: bold;
               }
               .meta {
