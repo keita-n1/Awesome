@@ -117,20 +117,6 @@
               height: 308px;
               border: 1px #ddd solid;
             }
-            &__meta {
-              padding: 6px 0 9px 0;
-              border: 1px #ddd solid;
-              width: 230px;
-              height: 25px;
-              .far {
-                padding-left: 10px;
-                vertical-align: middle;
-              }
-              .far:before {
-                padding-right: 10px;
-                color: #FF99CC;
-              }
-            }
           }
         }
       }
