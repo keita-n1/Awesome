@@ -80,24 +80,23 @@
           .like_container {
             display: flex;
             margin: 10px;
-            .awesome {
-              font-size: 22px;
-              line-height: 1.2;
-              color: #99FFCC;
-              font-weight: bold;
-            }
-            .far {
-              font-size: 18px;
-              line-height: 1.2;
-              margin: 3px 0 0 30px;
-              color: #FF6699;
-              font-weight: bold;
-            }
-            .like {
-              font-size: 18px;
-              line-height: 1.2;
-              margin-top: 3px;
-              
+            li {
+              list-style: none;
+              display: flex;
+              line-height: 28px;
+              .awesome {
+                font-size: 22px;
+                line-height: 1.2;
+                color: #99FFCC;
+                font-weight: bold;
+                margin-right: 170px;
+              }
+              .like {
+                span:before {
+                  color: red;
+                  margin-right: 30px;
+                }
+              }
             }
           }
           //吹き出し文
@@ -219,15 +218,8 @@
                 width: 174px;
                 background: white;
                 margin-right: 18px;
-                .like_container {
-                  display: flex;
-                  .far {
-                    font-size: 18px;
-                    line-height: 1.2;
-                    margin: 3px 10px 3px 6px;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
+                .img {
+                  margin: 0px;
                 }
               }
             }

@@ -22,9 +22,10 @@
       #content_container
         .comment_container
           .like_container
-            %p.awesome Awesome
-            %i.far.fa-heart
-            %p.like 1045
+            %li{"data-coordinate-id" => "#{@coordinate.id}", :id => "coordinate-#{@coordinate.id}"}
+              %p.awesome Awesome
+              %span.timestamp
+              = render "likes/like", coordinate: @coordinate
           .form 
             = form_with model: @comment,url: {action: :create}, local: true do |f|
               = f.text_area :comment, class: "comment"
@@ -57,10 +58,7 @@
                 %li.more_img
                   %p.img
                     - if coordinate.image.present?
-                      = link_to image_tag(coordinate.image.to_s, height: "229", width: "174"), user_coordinate_comments_path(coordinate.user_id, coordinate.id)
-                  .like_container
-                    %i.far.fa-heart
-                  %p.like 1045
+                      = link_to image_tag(coordinate.image.to_s, height: "227", width: "172"), user_coordinate_comments_path(coordinate.user_id, coordinate.id)
             .more
               = link_to 'もっと見る', user_path(@coordinate.user.id), class: 'over'
               

@@ -18,7 +18,7 @@
       -#       %p.awesome Awesome
       -#       %i.far.fa-heart
       -#       %p.like 1045
-      %li
+      %li{"data-coordinate-id" => "#{coordinate.id}", :id => "coordinate-#{coordinate.id}"}
         .image_container
           %p.img
             = link_to image_tag(coordinate.image.to_s), user_coordinate_comments_path(coordinate.user_id, coordinate.id)
@@ -35,5 +35,7 @@
               %p.height #{coordinate.user.height}cm
           .like_container
             %p.awesome Awesome
-            %i.far.fa-heart
-            %p.like 1045
+            %span.timestamp
+            = render "likes/like", coordinate: coordinate
+
+
