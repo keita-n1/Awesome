@@ -287,23 +287,15 @@
                   width: 64px;
                   .awesome {
                     font-size: 13px;
-                    line-height: 1.2;
+                    margin-bottom: 5px;
                     color: #99FFCC;
                     font-weight: bold;
                   }
-                  .far {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: left;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
                   .like {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: right;
+                    span:before {
+                      color: red;
+                      margin-right: 30px;
+                    }
                   }
                 }
               }
